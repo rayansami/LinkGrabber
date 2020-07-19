@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Link graber from highlights",
+    "author": "Sami",
+    "version": "0.1",
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+A",
+                "mac": "Command+Shift+A",
+                "chromeos": "Ctrl+Shift+A",
+                "linux": "Ctrl+Shift+A"
+            }
+        }
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "extension.html"
+    }
+}
